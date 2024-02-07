@@ -7,7 +7,7 @@ package d2xx_test
 import (
 	"fmt"
 
-	"periph.io/x/d2xx"
+	"github.com/haakonnessjoen/d2xx"
 )
 
 func ExampleVersion() {
