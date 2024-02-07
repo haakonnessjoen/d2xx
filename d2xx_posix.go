@@ -33,6 +33,10 @@ func createDeviceInfoList() (int, Err) {
 	return int(num), Err(e)
 }
 
+func setVIDPID(vid, pid uint16) Err {
+	return Err(C.FT_SetVIDPID(C.DWORD(vid), C.DWORD(pid)))
+}
+
 func rescan() Err {
 	return Err(C.FT_Rescan())
 }

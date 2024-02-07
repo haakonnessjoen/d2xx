@@ -144,6 +144,11 @@ func Open(i int) (Handle, Err) {
 	return open(i)
 }
 
+// Set customized VID and PID for the driver to search for.
+func SetVIDPID(vid, pid uint16) Err {
+	return setVIDPID(vid, pid)
+}
+
 // Rescan rescan the USB bus for new devices.
 func Rescan() Err {
 	return rescan()
